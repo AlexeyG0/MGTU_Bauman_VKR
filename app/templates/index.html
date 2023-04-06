@@ -8,8 +8,7 @@
 <main>
 
 <div class="body_container">
-    <div class="content_container">
-    
+    <section class="content_container">  
     <div class="columns">
         <div class="request">
             <form action="{{url_for('main')}}" method="POST">
@@ -97,13 +96,15 @@
             Text<br>
             Text<br>
         </div>
+        
     </div>
+    </section>
 
     
 
 
-    </div>
-    <div class="content_container">
+    
+    <section class="content_container">
 
         <p class="block_text"> text text </p>
         <form action="{{url_for('main')}}" method="POST">
@@ -124,7 +125,7 @@
             {% endif %}
         </div>
 
-    </div>
+    </section>
 </div>
 
 </main>

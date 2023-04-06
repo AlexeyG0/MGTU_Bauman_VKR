@@ -6,9 +6,13 @@ body {
 
 #header {
     background: #4aa1f3;
-    padding: 10px;
+    padding: 20px;
     position: relative;
-    border-bottom: 3px solid #ddd;
+    border-bottom: 3px solid #dcdbdb;
+}
+
+.header_logotype{
+    font-size: 30px;
 }
 
 .header_container {
@@ -28,7 +32,7 @@ body {
 
 .content_container {
     box-sizing: border-box;
-    background: #e6e7e8;
+    background: #f8f8f8;
 
     max-width: 1200px;
     min-width: 600px;
@@ -69,7 +73,7 @@ div.input_val {
     display: inline-block;
 }
 
-.request {
+div.request {
     min-width: 30%;
 
 }
