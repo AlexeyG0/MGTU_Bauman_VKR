@@ -1,0 +1,79 @@
+body {
+    font-family: 'fangsong';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#header {
+    background: #4aa1f3;
+    padding: 10px;
+    position: relative;
+    border-bottom: 3px solid #ddd;
+}
+
+.header_container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.body_container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.content_container {
+    box-sizing: border-box;
+    background: #e6e7e8;
+
+    max-width: 1200px;
+    min-width: 600px;
+    width: 60%;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+
+    
+
+}
+
+div.columns{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+div.inputbox{
+    max-width: 500;   
+    background-color: #3C6DC3;
+    display: flex;
+}
+
+div.input_text{
+    width: 250px;
+    flex-basis: 50%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.input_val {
+    flex-basis: 50%;
+    display: inline-block;
+}
+
+.request {
+    min-width: 30%;
+
+}
+
+div.describe {
+    padding-left: 30px;
+}
