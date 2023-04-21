@@ -80,4 +80,5 @@ div.request {
 
 div.describe {
     padding-left: 30px;
+    max-width: 300px;
 }

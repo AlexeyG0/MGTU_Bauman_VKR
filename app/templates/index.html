@@ -11,67 +11,62 @@
     <section class="content_container">  
     <div class="columns">
         <div class="request">
-            <form action="{{url_for('main')}}" method="POST">
+            <form action="{{url_for('pred')}}" method="POST">
                 <fieldset>
-                    <legend>Заполните значения</legend>
-
-                    <div class="input_box">
-                        <div class="input_text">Соотношение матрица-наполнитель</div>
-                        <div class="input_val"><input name="var_pol_0" type="number" step="0.001"></div>
-                    </div>
+                    <legend>Модель прогнозирования<br> соотношение матрица-наполнитель</legend>
 
                     <div class="input_box">
                         <div class="input_text">Плотность, кг/м3</div>
-                        <div class="input_val"><input name="var_pol_1" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_1" type="number" step="0.001" required></div>
                     </div>
 
                     <div class="input_box">
                         <div class="input_text">модуль упругости, ГПа</div>
-                        <div class="input_val"><input name="var_pol_2" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_2" type="number" step="0.001" required></div>
                     </div>
 
                     <div class="input_box">
                         <div class="input_text">Количество отвердителя, м.%</div>
-                        <div class="input_val"><input name="var_pol_3" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_3" type="number" step="0.001" required></div>
                     </div>
 
                     <div class="input_box">
                         <div class="input_text">Содержание эпоксидных групп,%_2</div>
-                        <div class="input_val"><input name="var_pol_4" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_4" type="number" step="0.001" required></div>
                     </div>
 
                     <div class="input_box">
                         <div class="input_text">Температура вспышки, С_2</div>
-                        <div class="input_val"><input name="var_pol_5" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_5" type="number" step="0.001" required></div>
                     </div>
                     
                     <div class="input_box">
                         <div class="input_text">Поверхностная плотность, г/м2</div>
-                        <div class="input_val"><input name="var_pol_6" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_6" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Модуль упругости при растяжении, ГПа</div>
-                        <div class="input_val"><input name="var_pol_7" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_7" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Прочность при растяжении, МПа</div>
-                        <div class="input_val"><input name="var_pol_8" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_8" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Потребление смолы, г/м2</div>
-                        <div class="input_val"><input name="var_pol_9" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_9" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Угол нашивки, град</div>
-                        <div class="input_val"><input name="var_pol_10" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_10" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Шаг нашивки</div>
-                        <div class="input_val"><input name="var_pol_11" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_11" type="number" step="0.001" required></div>
                     </div>
                     <div class="input_box">
                         <div class="input_text">Плотность нашивки</div>
-                        <div class="input_val"><input name="var_pol_12" type="number" step="0.001"></div>
+                        <div class="input_val"><input name="var_pol_12" type="number" step="0.001" required></div>
                     </div>
 
 
@@ -85,48 +80,28 @@
         <div class="describe">
             <br>
             <br>
-            <li>Текст</li>
-            <li>Текст</li>
-            Text<br>
-            Text<br>
-            Text<br>
-            Text<br>
-            Text<br>
-            Text<br>
-            Text<br>
-            Text<br>
+            Метрики прогноза модели:<br>
+            <li>MAE - 0.69</li>
+            <li>Коэффициент детерминации - 0.01 </li>
+            <br>
+            <strong>!!Прогнозируемые моделю значения не является достоверными <br>
+            и предназначены для демонстрации работы приложения</strong>
         </div>
         
     </div>
+    <div class="response">
+        {% if pred_result %}
+            <br>
+            <p style="font-size: 10px">
+            Прогнозируемое соотношение матрица-наполнитель:</p>
+            <p style="font-size: 10px">
+            {{pred_result}}</p>
+        {% endif %}
+    </div>
+    
     </section>
 
     
-
-
-    
-    <section class="content_container">
-
-        <p class="block_text"> text text </p>
-        <form action="{{url_for('main')}}" method="POST">
-            <legend>legend</legend>
-            <input name="var_value_1" type="number" step="0.001" required>
-            <br>
-            <br>
-            <input type="submit">
-        </form>
-    
-        <div class="response">
-            {% if result %}
-                <br>
-                <p style="font-size: 20px">
-                Ответ </p>
-                <p style="font-size: 20px">
-                {{result}}</p>
-            {% endif %}
-        </div>
-
-    </section>
-</div>
 
 </main>
 {% endblock %}
